@@ -1,0 +1,8 @@
+t:FMAP test tune
+d:A test of the FMAP file format
+l:GNU General public licence v3.0 
+v:0.5
+r:4
+--NOTES--
+C4,$3,E4,D4,C4,C4,G4,$3,F4,E4,*2,G4,$3,E4,D4,C4,C4
+--END--
