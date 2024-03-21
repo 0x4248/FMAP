@@ -3,11 +3,6 @@
 # GitHub: https://www.gitub.com/lewisevans2007/FMAP
 # Licence: GNU General Public Licence v3.0
 # By: Lewis Evans
-# FMAP
-# A audio file format that takes in frequency values or notes and turns them into WAV format.
-# GitHub: https://www.gitub.com/lewisevans2007/FMAP
-# Licence: GNU General Public Licence v3.0
-# By: Lewis Evans
 
 from FMAP.note_convert import convert_note_to_freq
 
