@@ -28,6 +28,7 @@ There are some meta data with the file, these are:
 `l` - Licence
 `v` - Volume
 `r` - Rate (Notes per second)
+`f` - Fade between notes (To prevent clicking)
 
 ### Notes
 

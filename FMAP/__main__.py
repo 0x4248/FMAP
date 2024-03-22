@@ -22,11 +22,11 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         file_name = sys.argv[1]
         print("Computing frequencies")
-        notes, title, description, license, note_duration, notes_per_second, volume, sample_rate = file.file_to_notes(file_name)
+        notes, title, description, license, note_duration, notes_per_second, volume, sample_rate, fade_between_notes = file.file_to_notes(file_name)
 
         output = sys.argv[2]
         print("Rendering audio")
-        audio.render_audio(output, notes, note_duration, sample_rate)
+        audio.render_audio(output, notes, note_duration, sample_rate, fade_between_notes)
     
         if play:
             print("Playing audio")
@@ -40,11 +40,11 @@ if __name__ == '__main__':
     else:
         file_name = input("Enter the name of the file: ")
         print("Computing frequencies")
-        notes, title, description, license, note_duration, notes_per_second, volume, sample_rate = file.file_to_notes(file_name)
+        notes, title, description, license, note_duration, notes_per_second, volume, sample_rate, fade_between_notes = file.file_to_notes(file_name)
 
         output = input("Enter the name of the output file: ")
         print("Rendering audio")
-        audio.render_audio(output, notes, note_duration, sample_rate)
+        audio.render_audio(output, notes, note_duration, sample_rate, fade_between_notes)
 
         play = input("Do you want to play the audio? (y/n): ")
         if play == "y":

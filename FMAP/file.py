@@ -13,6 +13,7 @@ def file_to_notes(file):
     note_duration = 1/notes_per_second
     sample_rate = 44100
     volume = 2
+    fade_between_notes = 1000
     notes = []
     title = ""
     description = ""
@@ -31,6 +32,10 @@ def file_to_notes(file):
         elif line.startswith('r:'):
             notes_per_second = int(line[2:])
             note_duration = 1/notes_per_second
+        elif line.startswith('f:'):
+            fade_between_notes = int(line[2:])
+            if fade_between_notes == 0:
+                fade_between_notes = 1
         if line == '--NOTES--':
             is_notes = True
             continue
@@ -55,4 +60,4 @@ def file_to_notes(file):
                         notes.append(int(line))
         else:
             continue
-    return notes, title, description, license, note_duration, notes_per_second, volume, sample_rate
+    return notes, title, description, license, note_duration, notes_per_second, volume, sample_rate, fade_between_notes
