@@ -4,25 +4,30 @@
 # Licence: GNU General Public Licence v3.0
 # By: Lewis Evans
 
-python = python3
-pip = pip3
+PYTHON = python3
+PIP = pip3
+
+ifeq (, $(shell which $(PYTHON)))
+$(error "No $(PYTHON) in PATH, please install $(PYTHON) or set the PYTHON variable to the correct path")
+endif
 
 all: dependencies_check build
 
 install_all_and_build: install_requirements build
 
 build:
-	$(python) setup.py sdist bdist_wheel
+	$(PYTHON) setup.py sdist bdist_wheel
 
 dependencies_check:
-	$(python) tools/dependencies_check.py
+	$(PYTHON) tools/dependencies_check.py
 
 install_requirements:
-	$(pip) install --upgrade pip
-	$(pip) install -r requirements.txt
-	$(pip) install --user --upgrade setuptools
+	$(PIP) install --upgrade pip
+	$(PIP) install -r requirements.txt
+	$(PIP) install --user --upgrade setuptools
 
 clean:
-	rm -rf build dist FMAP.egg-info
+	@echo "RM\tbuild dist FMAP.egg-info"
+	@rm -rf build dist FMAP.egg-info
 
 .PHONY: all build update_pip install_requirements clean
