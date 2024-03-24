@@ -5,18 +5,20 @@
 # By: Lewis Evans
 
 python = python3
-
 pip = pip3
 
-all: update_pip install_requirements build
+all: dependencies_check build
+
+install_all_and_build: install_requirements build
 
 build:
 	$(python) setup.py sdist bdist_wheel
 
-update_pip:
-	$(pip) install --upgrade pip
+dependencies_check:
+	$(python) tools/dependencies_check.py
 
 install_requirements:
+	$(pip) install --upgrade pip
 	$(pip) install -r requirements.txt
 	$(pip) install --user --upgrade setuptools
 
