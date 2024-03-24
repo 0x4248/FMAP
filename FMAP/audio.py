@@ -19,8 +19,6 @@ def apply_fade(signal, fade_in_samples, fade_out_samples):
     signal = signal.astype(np.int16)
     return signal
 
-
-
 def render_audio(output, notes, note_duration, sample_rate, fade_samples=1000):
     output_file = wave.open(output, 'w')
     output_file.setnchannels(1)
