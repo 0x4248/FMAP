@@ -3,5 +3,7 @@
 # GitHub: https://www.gitub.com/lewisevans2007/FMAP
 # Licence: GNU General Public Licence v3.0
 # By: Lewis Evans
+#
+# Developer requirements
 
-numpy==1.26.4
+setuptools>=69.2.0

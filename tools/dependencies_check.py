@@ -24,6 +24,13 @@ except ImportError:
     print(f"{CROSS} numpy")
     not_installed.append("numpy")
 
+try:
+    import setuptools
+    print(f"{TICK} setuptools")
+except ImportError:
+    print(f"{CROSS} setuptools")
+    not_installed.append("setuptools")
+
 if len(not_installed) > 0:
     print(f"\n{TRIANGLE} Missing dependencies found.")
     print(f"Please run make install_requirements to install the missing dependencies.")
