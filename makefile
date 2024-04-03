@@ -34,7 +34,7 @@ test:
 	python -m FMAP test.FMAP test.wav
 
 help:
-	@echo "FMAP Makefile"
+	@echo "FMAP Makefile help"
 	@echo "Usage: make [target]"
 	@echo "Targets:"
 	@echo "  all:					Checks for requirements and builds"
