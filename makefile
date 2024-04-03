@@ -33,4 +33,15 @@ clean:
 test:
 	python -m FMAP test.FMAP test.wav
 
+help:
+	@echo "FMAP Makefile"
+	@echo "Usage: make [target]"
+	@echo "Targets:"
+	@echo "  all:					Checks for requirements and builds"
+	@echo "  build:					Builds package"
+	@echo "  dependencies_check:	Checks for requirements"
+	@echo "  clean:					Removes all build files"
+	@echo "  test:					Tests for installed "
+	@echo "  help:					Prints this help message"
+
 .PHONY: all build update_pip install_requirements clean
