@@ -30,4 +30,7 @@ clean:
 	@echo "RM\tbuild dist FMAP.egg-info"
 	@rm -rf build dist FMAP.egg-info
 
+test:
+	python -m FMAP test.FMAP test.wav
+
 .PHONY: all build update_pip install_requirements clean
