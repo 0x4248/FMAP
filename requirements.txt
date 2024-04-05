@@ -4,4 +4,4 @@
 # Licence: GNU General Public Licence v3.0
 # By: Lewis Evans
 
-numpy==1.26.4
+numpy>=1.26.4
