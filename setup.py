@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name="FMAP",
-    version="0.1",
+    version="1.0.0",
     packages=["FMAP"],
     install_requires=[
         "numpy",
