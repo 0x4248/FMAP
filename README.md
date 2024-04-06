@@ -60,4 +60,4 @@ pip install numpy simpleaudio
 
 ## Licence
 
-The project is licenced under the GNU General Public Licence v3.0 please see the [LICENCE](LICENCE) for more information
+The project is licenced under the GNU General Public Licence v3.0 please see the [LICENCE](LICENCE) for more information.
