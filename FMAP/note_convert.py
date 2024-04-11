@@ -1,8 +1,8 @@
 # FMAP
 # A audio file format that takes in frequency values or notes and turns them into WAV format.
-# GitHub: https://www.gitub.com/lewisevans2007/FMAP
+# GitHub: https://www.gitub.com/0x4248/FMAP
 # Licence: GNU General Public Licence v3.0
-# By: Lewis Evans
+# By: 0x4248
 
 C = [16,33,65,131,262,523,1047,2093,4186]
 CS = [17,35,69,139,277,554,1109,2217,4435]
